@@ -2,6 +2,7 @@ package Handlers;
 
 import Configuration.BookObj;
 
+
 import Configuration.GetCategories;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
@@ -18,3 +19,4 @@ public class Categories implements HttpHandler {
         httpServerExchange.getResponseSender().send(b.toString());
     }
 }
+;
