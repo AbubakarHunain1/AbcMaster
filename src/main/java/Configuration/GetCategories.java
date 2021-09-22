@@ -40,7 +40,7 @@ public class GetCategories {
 // Get a result set containing all data from test_table
 
 
-            PreparedStatement pstmt = connection.prepareStatement("select a.NAME, c.ID,c.CATEGORIES,b.TITLE FROM CATEGORIES c LEFT JOIN BOOK b ON c.ID = b.CATEGORIES_ID LEFT JOIN AUTHOR a on a.ID = b.AUTHOR_ID where c.ID = ?");
+            PreparedStatement pstmt = connection.prepareStatement("select a.NAME, c.ID,c.CATEGORIES,b.TITLE FROM categories c LEFT JOIN book b ON c.ID = b.CATEGORIES_ID LEFT JOIN author a on a.ID = b.AUTHOR_ID where c.ID = ?");
             pstmt.setInt(1, categoryid);
             ResultSet results = pstmt.executeQuery();
 

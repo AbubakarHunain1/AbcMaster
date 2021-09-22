@@ -41,7 +41,7 @@ public class Get {
 
 
 
-            PreparedStatement pstmt = connection.prepareStatement("select a.ID,a.NAME,b.TITLE FROM AUTHOR a LEFT JOIN BOOK b ON a.ID = b.AUTHOR_ID where a.ID = ?");
+            PreparedStatement pstmt = connection.prepareStatement("select a.ID,a.NAME,b.TITLE FROM author a LEFT JOIN book b ON a.ID = b.AUTHOR_ID where a.ID = ?");
             pstmt.setInt(1, bookid);
             ResultSet results = pstmt.executeQuery();
 
